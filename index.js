@@ -9,6 +9,7 @@ const app=express()
 app.set('view engine','ejs')
 app.set('views','./public/views')
 app.use(express.static('./public'))
+app.use(express.urlencoded({extended:true}))
 GRoute(app)
 
 app.listen(process.env.PORTSITE)

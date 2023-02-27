@@ -185,35 +185,36 @@
 		</div>
 	</div>
 </section>
+<!-- Куда отправить прайс лист -->
 <section class="get-catalog">
 	<div class="get-catalog__container container">
 		<div class="get-catalog__body">
 			<div class="get-catalog__title title">Получите полный каталог <br>и прайс на металлопрокат</div>
-			<form class="get-catalog__form get-catalog-form">
+			<form method="post" action="/" class="get-catalog__form get-catalog-form">
 				<div class="get-catalog-form__content">
 					<div class="get-catalog-form__grid">
 						<div class="get-catalog-form__wrapper form-field">
 							<label class="form-field__label" class="form-field__label" for="get-catalog-email">Куда отправить прайс и каталог?</label>
-							<input  class="form-field__input" placeholder="E-mail" id="get-catalog-email" type="text">
+							<input name="email" class="form-field__input" placeholder="E-mail" id="get-catalog-email" type="text">
 						</div>
 						<div class="get-catalog-form__wrapper form-field">
 							<label class="form-field__label" for="get-catalog-company-type">Какую компанию вы представляете?</label>
-							<select name="company-type" id="get-catalog-company-type">
-								<option value="1">Торговая компания, магазин</option>
+							<select name="companyType" id="get-catalog-company-type">
+								<option value="company">Торговая компания, магазин</option>
 							</select>
 						</div>
 						<div class="get-catalog-form__wrapper form-field">
 							<label class="form-field__label" for="get-catalog-name">Как к вам обращаться?</label>
-							<input  class="form-field__input" id="get-catalog-name" placeholder="Ваше имя" type="text">
+							<input name="name_client" class="form-field__input" id="get-catalog-name" placeholder="Ваше имя" type="text">
 						</div>
 						<div class="get-catalog-form__wrapper form-field">
 							<label class="form-field__label" for="get-catalog-phone">Введите телефон</label>
-							<input  class="form-field__input" id="get-catalog-phone" placeholder="+ 7 ( _ _ _ ) - _ _ _ - _ _ - _ _" type="text">
+							<input name="telnumber" class="form-field__input" id="get-catalog-phone" placeholder="+ 7 ( _ _ _ ) - _ _ _ - _ _ - _ _" type="text">
 						</div>
 					</div>
 					<div class="get-catalog-form__descr">Перезвоним, чтобы обсудить условия поставки</div>
 					<div class="get-catalog-form__btn-wrapper">
-						<button class="get-catalog-form__btn btn">Узнать стоимость</button>
+						<input type="submit" class="get-catalog-form__btn btn" value="Узнать стоимость">
 						<div class="get-catalog-form__text">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с Политикой конфиденциальности</div>
 					</div>
 				</div>
@@ -222,6 +223,7 @@
 		<div class="get-catalog__image"><img src="img/get-catalog-man.png" alt="Мужчина"></div>
 	</div>
 </section>
+<!-- Конец отправки прайса -->
 <section class="storage">
 	<div class="storage__container container">
 		<div class="storage__title title">Поддерживаем остатки на наших складах</div>
@@ -284,31 +286,31 @@
 		</div>
 	</div>
 </section>
+<!-- Получить предложение на поставку -->
 <section class="cost-calc">
 	<div class="cost-calc__container container">
 		<div class="cost-calc__text-block">
 			<div class="cost-calc__title title">Давайте обсудим ваш проект и подготовим его расчет</div>
 			<div class="cost-calc__text">Мы рассчитаем точную стоимость в течение 24 часов, подскажем, на чем вы можете сэкономить и расскажем все о наших возможностях.</div>
 		</div>
-		<form class="cost-calc__form cost-calc-form">
+		<form method="POST" action="/" class="cost-calc__form cost-calc-form">
 			<div class="cost-calc-form__wrapper">
-
 				<div class="cost-calc-form__title">Получите предложение на поставку металлопроката</div>
 				<div class="form-field">
 					<label for="" class="form-field__label">Как к вам обращаться?</label>
-					<input placeholder="Ваше имя" type="text" class="form-field__input">
+					<input name="name_client" placeholder="Ваше имя" type="text" class="form-field__input">
 				</div>
 				<div class="form-field">
 					<label for="" class="form-field__label">Введите телефон</label>
-					<input placeholder="+ 7 ( _ _ _ ) - _ _ _ - _ _ - _ _" type="text" class="form-field__input">
+					<input name="telnumber" placeholder="+ 7 ( _ _ _ ) - _ _ _ - _ _ - _ _" type="text" class="form-field__input">
 				</div>
 				<div class="form-field">
 					<label for="" class="form-field__label">Куда отправить прайс и каталог?</label>
-					<input placeholder="E-mail" type="text" class="form-field__input">
+					<input name="email" placeholder="E-mail" type="text" class="form-field__input">
 				</div>
 				<div class="cost-calc-form__attach-files"><span><img src="img/clip.svg" alt=""></span> Прикрепите файлы (заказ,спецификацию, смету, если есть)</div>
 				<div class="cost-calc-form__text">Или напишите нам на почту <span>info@tpk-gefest.ru</span></div>
-				<button class="cost-calc-form__btn btn">Узнать стоимость</button>
+				<input type="submit" class="cost-calc-form__btn btn" value="Узнать стоимость">
 				<div class="cost-calc-form__policy">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с <a href="policy.html">Политикой конфиденциальности</a></div>
 			</div>
 		</form>
@@ -317,6 +319,7 @@
 	<div class="cost-calc__label">Если у вас уже есть предложение от другой компании, прикрепите его к форме. Мы дадим свое предложение по наличию, цене и срокам поставки.
 	<span>Просто попробуйте, уверены, мы вас приятно удивим.</span></div>
 </section>
+<!-- Закончить получение на поставку оружия -->
 <section class="benefits">
 	<div class="benefits__container container">
 		<div class="benefits__title title">Какие еще выгоды от работы с нами?</div>
@@ -371,10 +374,13 @@
 				<div class="order-form__label form-field__label"><span>Давайте обсудим ваш заказ прямо сейчас</span> Оставьте свой
 					номер, мы свяжемся с вами, ответим на любые вопросы и расскажем больше о наших возможностях, назовем сроки и цену
 					исполнения вашего заказа.</div>
-				<div class="order-form__wrapper">
-					<input placeholder="+ 7 ( _ _ _ ) - _ _ _ - _ _ - _ _" type="text" class="form-field__input order-form__input">
-					<button class="order-form__btn btn">Обсудить заказ</button>
-				</div>
+                    <form method="post" action="/">
+                        <div class="order-form__wrapper">
+                            <input name="telnumber" placeholder="+ 7 ( _ _ _ ) - _ _ _ - _ _ - _ _" type="text" class="form-field__input order-form__input">
+					        <input type="submit" class="order-form__btn btn" value="Обсудить заказ">
+                        </div>
+                    </form>
+                </div>
 			</div>
 		</div>
 	</div>
@@ -416,6 +422,7 @@
 		</div>
 	</div>
 </footer>
+<!-- Марк -->
 <div class="popup popup-delivery" id="popup-delivery">
 	<div class="popup__content container">
 		<button class="popup__close">✕</button>
@@ -423,25 +430,25 @@
 		<div class="popup-delivery__subtitle subtitle">Если у вас уже есть предложение от другой компании, прикрепите его к форме.<br> Мы дадим свое предложение по наличию, цене и срокам поставки.</div>
 		<div class="popup-delivery__row">
 			<div class="popup-delivery__image"><img src="img/cost-calc.png" alt=""></div>
-			<form class="popup-delivery__form cost-calc-form">
+			<form method="post" action="/" class="popup-delivery__form cost-calc-form">
 				<div class="cost-calc-form__wrapper">
 					<div class="cost-calc-form__title">Отправьте свой запрос, уверены, мы вас приятно удивим.</div>
 					<div class="form-field">
 						<label for="" class="form-field__label">Как к вам обращаться?</label>
-						<input placeholder="Ваше имя" type="text" class="form-field__input">
+						<input name="name_client" placeholder="Ваше имя" type="text" class="form-field__input">
 					</div>
 					<div class="form-field">
 						<label for="" class="form-field__label">Введите телефон</label>
-						<input placeholder="+ 7 ( _ _ _ ) - _ _ _ - _ _ - _ _" type="text" class="form-field__input">
+						<input name="telnumber" placeholder="+ 7 ( _ _ _ ) - _ _ _ - _ _ - _ _" type="text" class="form-field__input">
 					</div>
 					<div class="form-field">
 						<label for="" class="form-field__label">Куда отправить прайс и каталог?</label>
-						<input placeholder="E-mail" type="text" class="form-field__input">
+						<input name="email" placeholder="E-mail" type="text" class="form-field__input">
 					</div>
 					<div class="cost-calc-form__attach-files"><span><img src="img/clip.svg" alt=""></span> Прикрепите файлы
 						(заказ,спецификацию, смету, если есть)</div>
 					<div class="cost-calc-form__text">Или напишите нам на почту <span>info@tpk-gefest.ru</span></div>
-					<button class="cost-calc-form__btn btn">Узнать стоимость</button>
+					<input type="submit" class="cost-calc-form__btn btn" value="Узнать стоимость">
 					<div class="cost-calc-form__policy">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и
 						соглашаетесь с <a href="policy.html">Политикой конфиденциальности</a></div>
 				</div>
@@ -454,16 +461,16 @@
 		<button class="popup__close">✕</button>
 		<div class="popup-callback__row">
 			<div class="popup-callback_image"><img src="img/popup-callback.png" alt=""></div>
-			<form class="popup-callback__form cost-calc-form">
+			<form method="post" action="/" class="popup-callback__form cost-calc-form">
 				<div class="cost-calc-form__wrapper">
 					<div class="cost-calc-form__title">Укажите контактные данные и удобное время для звонка</div>
 					<div class="form-field">
 						<label for="" class="form-field__label">Как к вам обращаться?</label>
-						<input placeholder="Ваше имя" type="text" class="form-field__input">
+						<input name="name_client" placeholder="Ваше имя" type="text" class="form-field__input">
 					</div>
 					<div class="form-field">
 						<label for="" class="form-field__label">Введите телефон</label>
-						<input placeholder="+ 7 ( _ _ _ ) - _ _ _ - _ _ - _ _" type="text" class="form-field__input">
+						<input name="telnumber" placeholder="+ 7 ( _ _ _ ) - _ _ _ - _ _ - _ _" type="text" class="form-field__input">
 					</div>
 					<div class="form-field">
 						<label for="" class="form-field__label">Когда вам позвонить?</label>
@@ -471,13 +478,15 @@
 							<button class="form-field__tabs-btn form-field__tabs-btn_active">Сейчас</button>
 							<button class="form-field__tabs-btn">По времени</button>
 						</div>
-						<input disabled placeholder="Например: 21 января в 14:00" type="text" class="form-field__input">
+                        Исправил типданных со строки на дату
+						<input name="date_call" placeholder="Например: 21 января в 14:00" type="datetime-local" class="form-field__input">
 					</div>
-					<button class="cost-calc-form__btn btn">Узнать стоимость</button>
+					<input type="submit" class="cost-calc-form__btn btn" value="Узнать стоимость">
 					<div class="cost-calc-form__policy">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с <a href="policy.html">Политикой конфиденциальности</a></div>
 				</div>
 			</form>
 		</div>
 	</div>
 </div>
+<!-- Конец Марка -->
 <%-include("./SupModules/End.ejs")%>
