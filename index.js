@@ -5,9 +5,12 @@ import GRoute from './middleware/Routes/GRoute.js'
 dotenv.config()
 
 const app=express()
+
 app.set('view engine','ejs')
 app.set('views','./public/views')
 app.use(express.static('./public'))
 GRoute(app)
 
 app.listen(process.env.PORTSITE)
+
+console.log("Server was started on: http://localhost:"+process.env.PORTSITE)
